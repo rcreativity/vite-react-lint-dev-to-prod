@@ -1,4 +1,22 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite eslint husky lint-staged cicd devepment to production
+
+1. antfu eslint-config | https://github.com/antfu/eslint-config
+
+2. CJ's antfu eslint-config settings | https://gist.github.com/rcreativity/f677295369dd41d2dcfd1937d1b4433d
+
+3. ESLint Stylistic | https://eslint.style/
+
+4. Husky | https://typicode.github.io/husky/
+
+5. lint-staged | https://www.npmjs.com/package/lint-staged
+
+6. Building and testing Node.js | https://docs.github.com/en/actions/tutorials/build-and-test-code/nodejs
+
+7. Triggering a workflow | https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow
+
+8. act (local workflow testing) | https://nektosact.com/
+
+##
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
