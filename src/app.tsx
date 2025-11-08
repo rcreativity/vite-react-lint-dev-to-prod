@@ -6,7 +6,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(24);
+  const [count, setCount] = useState(15);
 
   return (
     <>
