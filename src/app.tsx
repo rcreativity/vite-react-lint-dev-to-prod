@@ -1,42 +1,28 @@
-import { useState } from "react";
+import React from "react";
+import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import reactLogo from "./assets/react.svg";
+import Home from "./pages/home";
 
-import viteLogo from "/vite.svg";
-import "./app.css";
+const Posts = React.lazy(() => import("./pages/posts"));
+const Counter = React.lazy(() => import("./pages/counter"));
 
 function App() {
-  const [count, setCount] = useState(15);
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noreferrer noopener">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer noopener">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div style={{ padding: "1rem" }}>
+        <nav style={{ marginBottom: "1rem" }}>
+          <Link to="/" style={{ marginRight: "1rem" }}>Home</Link>
+          <Link to="/counter" style={{ marginRight: "1rem" }}>Counter</Link>
+          <Link to="/posts">Posts</Link>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/counter" element={<Counter />} />
+          <Route path="/posts" element={<Posts />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button type="button" onClick={() => setCount(count => count + 1)}>
-          count is
-          {" "}
-          {count}
-        </button>
-        <p>
-          Edit
-          {" "}
-          <code>src/App.tsx</code>
-          {" "}
-          and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </Router>
   );
 }
 
