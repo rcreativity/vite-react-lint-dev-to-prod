@@ -29,6 +29,8 @@ Last-Modified: Timestamp of the last modification. Server can respond with 304 N
 Saves bandwidth because the browser only downloads changed files.
 \*\* <meta http-equiv="Cache-Control" content="max-age=3600">
 
+git commit -m "..." -n `-n/--no-verify` option to skip hooks (eslint check)
+
 ##
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
