@@ -2,7 +2,7 @@
 
 1. antfu eslint-config | https://github.com/antfu/eslint-config
 
-2. CJ's antfu eslint-config settings | https://gist.github.com/rcreativity/f677295369dd41d2dcfd1937d1b4433d
+2. antfu eslint-config settings | https://gist.github.com/rcreativity/f677295369dd41d2dcfd1937d1b4433d
 
 3. ESLint Stylistic | https://eslint.style/
 
@@ -15,6 +15,19 @@
 7. Triggering a workflow | https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow
 
 8. act (local workflow testing) | https://nektosact.com/
+
+### app caching (use if applicable)
+
+9. use `Cache-Control "public, max-age=31536000, immutable"` for (js|css) and Static Asset Caching (?:ico|gif|jpg|jpeg|png|woff2?|ttf|svg|eot)
+10. use `Cache-Control: no-cache, no-store, must-revalidate` for html so that it will fetch newly files hashed called Cache Busting
+11. use gzip or brotli compression to reduce file size by 50% to load
+12. Workbox PWA application if requited for offline site
+
+ETag: A unique hash representing file content. Browser sends it back to server to check if file changed.
+Last-Modified: Timestamp of the last modification. Server can respond with 304 Not Modified if file hasn’t changed.
+
+Saves bandwidth because the browser only downloads changed files.
+\*\* <meta http-equiv="Cache-Control" content="max-age=3600">
 
 ##
 
